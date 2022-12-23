@@ -52,7 +52,7 @@ the top 3 most commonly referred to nouns and adjectives in our tweet set and ex
 
 Above is a live view of how the system interface is designed, the website can be found at [**TwitterTrends**](http://twitr.trioffline.com:25565/)
 
-## »│ Contributors
+## »│ Developers
 Thank you to the following people:
 <table>
   <tr>
@@ -61,4 +61,3 @@ Thank you to the following people:
     <td align="center"><a href="https://github.com/Ollyentwistle"><img src="https://avatars.githubusercontent.com/u/61790858?v=4" width="100px;" alt=""/><br /><sub><b>Ollyentwistle</b></sub></a><br /><a href="Sentiment-Olly" title="Code">💻</a> <a href="#ideas-Olly" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
-
