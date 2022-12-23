@@ -1,0 +1,203 @@
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+p { margin: 0 !important; }
+h3 { color: #00aced !important; }
+
+/* Search */
+.search-form {
+  position: absolute;
+  right: 170px;
+}
+
+.input-group.search-group {
+    height: 50px;
+    min-width: 50px;
+    position: relative;
+}
+
+.input-group .form-control:focus {
+    padding: 10px 30px;
+    width: 300%;
+    color: #606c76;
+    cursor: auto;
+	text-align: right;
+	
+}
+
+.input-group .form-control:focus::-moz-placeholder { 
+    color: rgb(184, 184, 184);
+}
+
+.input-group .form-control::-moz-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input-group .form-control:focus {
+  border-color: #00aced;
+}
+
+.form-control.search-control {
+  border-radius: 3px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  color: transparent;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 10px;
+  outline: 0 none;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 30;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  padding-right: 25px;
+  background: url('../img/magnifying-glass-solid.svg') no-repeat right;
+  background-size: 18px;
+
+  transition: width 0.25s;
+}
+
+/* Dynamic Trends */
+.square {
+    border-style: solid;
+    border-width: 1px;
+	border-radius: 50px;
+    border-color: #00aced;
+    overflow: hidden;
+}
+
+.square.text {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.textTrend {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.centerFoot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.centericon {
+    margin-right: auto;
+    padding-left: 30px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 5%;
+    color: white;
+    font-size: 20px;
+}
+
+.top-right {
+    position: relative;
+    font-size: 15px;
+    float: right;
+}
+
+.image {
+    position: relative;
+    top: -50%;
+    width:100%; 
+    height: 500px;
+    border-radius: 50px 50px 0px 0px;
+    object-fit:cover;
+    object-position: center;
+    padding-bottom: 10px;
+    margin-top: -40%;
+}
+
+.w3-modal-content {
+    color: white;
+    background-color: black;
+    border-radius: 10px !important;
+    width: 400px !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.subscribe{
+    color: white;
+    border-color: #00aced !important;
+    border-top-style: hidden !important;
+    border-right-style: hidden !important;
+    border-left-style: hidden !important;
+    border-radius: 0px !important; 
+    width: 75% !important;
+    padding-left: 50px;
+}
+
+.icon{
+    color: #00aced;
+    padding-left: 10px;
+
+}
+.pad{
+    padding-left: 10px;
+}
+
+.pad.two{
+    padding-left: 55px;
+}
+
+.btn{
+    border-color:#00aced;
+    background-color: #00aced;
+    border-radius:3em;
+    color:white;
+    transition:0.2s;
+    float: right;
+}
+
+#sub {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+  
+#sub.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  

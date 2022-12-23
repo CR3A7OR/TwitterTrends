@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  		<title>Trend Rewind</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+		<!-- CSS Reset -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<!-- Milligram CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='milligram-1.4.1/dist/milligram.css') }}">
+    	<link rel="stylesheet" href="{{ url_for('static', filename='milligram-1.4.1/dist/main.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
+	</head>
+
+	<body>
+		<script src="{{ url_for('static', filename='js/main.js') }}?0"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<main class="wrapper">
+		<nav class="navigation">
+			<section class="container">
+			  <a class="navigation-title" href="/">
+				<img src="../static/img/RewindLogoSmall.png" width="20%" height="20%">
+			  </a>
+			  
+			  <ul class="navigation-list float-right">
+				<li class="navigation-item">
+					<form role="search" method="get" class="search-form">
+						<div class="input-group search-group">
+							<input type="text" id="search" onkeydown = "if (event.keyCode == 13)document.getElementById('btnSearch').click()" class="form-control search-control" onfocus="this.value=''" name="searchName" placeholder="Search..">
+						</div><!-- /.input-group -->
+					</form><!-- /.search-form -->
+					<a class="navigation-link" href="/about" data-popover><strong>About</strong></a>
+					&nbsp;
+					<a class="navigation-link" href="#subscribe" data-popover onclick="document.getElementById('id01').style.display='block'"> <i class="fa fa-paper-plane"></i><strong> Subscribe</strong></a>
+
+					<div id="id01" class="w3-modal">
+						<div class="w3-modal-content w3-animate-top w3-card-4">
+						  <div class="w3-container">
+							<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+							<div class="pad">
+								<h5><strong>NewsLetter</strong></h5> 
+								<img src="../static/img/user-modified.png" width="50px" height="50px">
+								<input id="email" type="text" class="subscribe" name="subscribe" placeholder="johndoe@gmail.com">
+							</div>
+							<div class="pad two">
+								<i class="fa-regular fa-image icon"></i>
+								<i class="fa-regular fa-rectangle-xmark icon"></i>
+								<i class="fa-regular fa-chart-bar icon"></i>
+								<i class="fa-regular fa-face-smile icon"></i>
+								<i class="fa-regular fa-calendar icon"></i>
+							</div>
+							<button type="button" method="post" class="btn" type="submit" onclick="attemptRegister(); return false;">Subscribe</button> 
+						  </div>
+						</div>
+					</div>
+
+				</li>
+			  </ul>
+
+			</section>
+		</nav>
+        
+		<section class="container" id="content">
+			<div class="square text">
+			<h5 class="title"><small>{{ date }}</small></h5>
+			<img src="../static/img/RewindLogoSmall.png" alt="Logo" width="100%" height="100%" class="center"> 
+			<p><strong><em>Your daily Twitter Catchup</em></strong></p>
+        	<p><em>- AI Written</em></p>
+			</div>
+		</section>
+		
+		{% for trend in data['trends'] %}
+		<section class="container test" id="trend">
+			<div class="square">
+				<img class="image" src="{{ trend['imgURL'] }}">
+				<div class="textTrend">
+					<div class="top-left"><strong>{{ trend['name'] }}</strong></div>
+					<div class="top-right"><em>- AI Written</em></div>
+					<h3><strong>{{ trend['title'] }}</strong></h3>
+					<p>{{ trend['article'] }}</p>
+					&nbsp;
+				</div>
+				<a href="{{ trend['url'] }}" data-popover><img src="../static/img/square-twitter.svg" width="75px" height="75px" class="centericon"></a>
+			</div>
+		</section>
+		{% endfor %}
+
+		<footer class="footer">
+			<section class="container">
+			<div class="centerFoot">
+			  <p>
+				Designed by
+				<a
+				  target="_blank"
+				  href="https://github.com/milligram/milligram#license"
+				  title="TwiTR"
+				  >TwiTR team</a
+				>. Licensed under the
+				<a
+				  target="_blank"
+				  href="https://github.com/milligram/milligram#license"
+				  title="MIT License"
+				  >MIT License</a
+				>.
+			  </p>
+			</div>
+			</section>
+		  </footer>
+	</main>
+
+    </body>
+	<div id="sub"></div>
+	<span hidden><input type="button" id="btnSearch" value="Search" onclick="buttonCode();"/></span>
+</html>

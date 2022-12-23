@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+    .square {
+        border-style: solid;
+        border-width: 1px;
+	    border-radius: 50px;
+        border-color: #00aced;
+        overflow: hidden;
+        max-width: 50%;
+    } 
+    .square.text {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+    }
+    .container.test{
+     padding-top:1rem
+    }
+    .image {
+        position: relative;
+        width:100%; 
+        height: 500px;
+        top: -50%;
+        border-radius: 50px 50px 0px 0px;
+        object-fit:cover;
+        object-position: center;
+        padding-bottom: 10px;
+        margin-top: -40%;
+    }
+    .textTrend {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    p { margin: 0 !important; }
+    h3 { color: #00aced !important; }
+
+    .top-left {
+        position: absolute;
+        top: 5%;
+        color: black;
+        font-size: 20px;
+    }
+    .top-right {
+        position: relative;
+        font-size: 15px;
+        float: right;
+    }
+    .centericon {
+        margin-right: auto;
+        padding-left: 30px;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="container test center" id="content">
+        <div class="square text">
+            <h5 class="title"><small>{{ date }}</small></h5>
+            <img src="https://www.trioffline.com/RewindLogoSmall.png" alt="Logo" width="100%" height="100%" class="center"> 
+            <p><strong><em>Your daily Twitter Catchup</em></strong></p>
+            <p><em>- AI Written</em></p>
+        </div>
+	</div>
+
+    {% for trend in data['trends'] %}
+		<div class="container test center" id="trend">
+			<div class="square">
+				<img class="image" src="{{ trend['imgURL'] }}">
+				<div class="textTrend">
+					<div class="top-left"><strong>{{ trend['name'] }}</strong></div>
+					<div class="top-right"><em>- AI Written</em></div>
+					<h3><strong>{{ trend['title'] }}</strong></h3>
+					<p>{{ trend['article'] }}</p>
+					&nbsp;
+				</div>
+				<a href="{{ trend['url'] }}" data-popover><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Ftwitter-icons-png-1.png&f=1&nofb=1&ipt=c9948ebfcc788e024ba7afee07faa7c6d304a844a66bbecd2b0b854015773f91&ipo=images" width="75px" height="75px" class="centericon"></a>
+			</div>
+		</div>
+	{% endfor %}
+    </body>
+</html>
