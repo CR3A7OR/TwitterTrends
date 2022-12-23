@@ -35,7 +35,30 @@ the top 3 most commonly referred to nouns and adjectives in our tweet set and ex
 - THE PROJECT WEBSITE IS AVAILABLE BELOW BUT IS STATIC AS OF NOW DUE TO SERVER ARCHITECTURE LIMITATIONS -
 ```
  
-│ [**TwitterTrends**](http://twitr.trioffline.com:25565/) │
-
 ## »│ Operartion
+
+<table>
+    <tr>
+      <td><p align="center">Email</p></td>
+      <td><p align="center">Website</p></td>
+      <td><p align="center">Discord</p></td>
+    </tr>
+    <tr>
+      <td><img src="/READMEIMG/email.png" /></td>
+      <td><img src="/READMEIMG/web.png" /> </td>
+      <td><img src="/READMEIMG/discordEmbed.png" /> </td>
+    </tr>
+</table>
+
+Above is a live view of how the system interface is designed, the website can be found at [**TwitterTrends**](http://twitr.trioffline.com:25565/)
+
+## »│ Contributors
+Thank you to the following people:
+<table>
+  <tr>
+      <td align="center"><a href="https://github.com/Ollyentwistle"><img src="https://avatars.githubusercontent.com/u/67477209?v=4" width="100px;" alt=""/><br /><sub><b>CR3A7OR</b></sub></a><br /><a href="#design-CR3A7OR" title="Design">🎨</a> <a href="#maintenance-CR3A7OR" title="Maintenance">🚧</a> <a href="WEB-CR3A7OR" title="Code">💻</a> <a href="#ideas-CR3A7OR" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/TolGb01"><img src="https://avatars1.githubusercontent.com/u/50290936?v=4?s=100" width="100px;" alt=""/><br /><sub><b>TolGb01</b></sub></a><br /><a href="#maintenance-Tolu" title="Maintenance">🚧</a> <a href="AI-Tolu" title="Code">💻</a> <a href="#ideas-Tolu" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Ollyentwistle"><img src="https://avatars.githubusercontent.com/u/61790858?v=4" width="100px;" alt=""/><br /><sub><b>Ollyentwistle</b></sub></a><br /><a href="Sentiment-Olly" title="Code">💻</a> <a href="#ideas-Olly" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
 
