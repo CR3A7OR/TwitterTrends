@@ -259,9 +259,12 @@ class TrendProcessor():
                         if possible_extension == "jpg" or possible_extension == "png":
                             tweet_closest_sentiment_image = tweets[i]["entities"]["media"][0]["media_url"]
                             tweet_closest_sentiment_val = diff
-                if tweet_closest_sentiment_image == "":
-                    average_sentiment, tweet_closest_sentiment_image = self.process_initial_tweets(trend_name,
-                        "-filter:retweets filter:images")
+            if tweet_closest_sentiment_image == "" and filter_val != "-filter:retweets filter:images":
+                print("searching again to find image")
+                average_sentiment, tweet_closest_sentiment_image = self.process_initial_tweets(trend_name,
+                    "-filter:retweets filter:images")
+            elif tweet_closest_sentiment_image == "" and filter_val == "-filter:retweets filter:images":
+                tweet_closest_sentiment_image = "invalid_trend"
         return (average_sentiment, tweet_closest_sentiment_image)   
     def process_larger_tweet_set(self, trend_name):
         done = False
@@ -540,6 +543,7 @@ class TrendProcessor():
             if self.trends_passed >= len(self.trends):
                 finished = True
         return (self.names, self.urls, self.article_titles, self.articles, self.imgURLs)
+
 trends= []
 final_json = {}
 vectoriser = load('tf_idf_vec.joblib')
