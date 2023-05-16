@@ -50,7 +50,7 @@ the top 3 most commonly referred to nouns and adjectives in our tweet set and ex
     </tr>
 </table>
 
-Above is a live view of how the system interface is designed, the website can be found at [**TwitterTrends**](http://twitr.trioffline.com/)
+Above is a live view of how the system interface is designed, the website can be found at [**TwitterTrends**](https://twitr.trioffline.com/)
 
 ## »│ Developers
 Thank you to the following people:
